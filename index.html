@@ -2,38 +2,258 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FareLuxe AI Test</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>FareLuxe AI | Luxury Journeys</title>
+
+  <meta
+    name="description"
+    content="Luxury AI travel planning with personalized flight and hotel combinations."
+  >
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #07111f;
-  color: #d8b56a;
-  font-family: Arial, sans-serif;
-  text-align: center;
-">
-  <div>
-    <h1>FareLuxe AI</h1>
-    <p style="color: white;">The website is working!</p>
-  </div>
-</body>
-</html>
-    }
+<body>
 
-    body {
-      font-family: Inter, Arial, sans-serif;
-      background: var(--ivory);
-      color: var(--charcoal);
-      line-height: 1.6;
-    }
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a class="logo" href="#">
+      <span class="logo-mark">FL</span>
+      <span>FareLuxe <strong>AI</strong></span>
+    </a>
 
-    button,
-    input,
+    <div class="nav-links">
+      <a href="#destinations">Destinations</a>
+      <a href="#concierge">AI Concierge</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <button class="button button-gold open-planner">
+      Plan a Journey
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Your personal travel intelligence</p>
+
+      <h1>
+        Travel beautifully.<br>
+        Spend <em>intelligently.</em>
+      </h1>
+
+      <p class="hero-description">
+        Discover personalized flight and hotel combinations with an
+        AI concierge designed around your preferences, budget and
+        special requirements.
+      </p>
+
+      <div class="hero-actions">
+        <button class="button button-gold open-planner">
+          ✦ Plan My Journey
+        </button>
+
+        <a class="button button-outline" href="#packages">
+          Explore Packages
+        </a>
+      </div>
+
+      <div class="benefits">
+        <span>● Personalized planning</span>
+        <span>● Transparent totals</span>
+        <span>● Luxury value scoring</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Search -->
+    <section class="search-section">
+      <div class="search-card">
+        <div class="search-tabs">
+          <button class="tab active">Flight + Hotel</button>
+          <button class="tab">Flights</button>
+          <button class="tab">Hotels</button>
+        </div>
+
+        <form id="travelSearch" class="search-form">
+          <label>
+            <span>Leaving from</span>
+            <input
+              id="departure"
+              type="text"
+              placeholder="New York"
+              required
+            >
+          </label>
+
+          <label>
+            <span>Traveling to</span>
+            <input
+              id="destination"
+              type="text"
+              placeholder="Paris"
+              required
+            >
+          </label>
+
+          <label>
+            <span>Departure date</span>
+            <input id="travelDate" type="date" required>
+          </label>
+
+          <label>
+            <span>Travelers</span>
+            <select id="travelers">
+              <option>1 traveler</option>
+              <option selected>2 travelers</option>
+              <option>3 travelers</option>
+              <option>4 travelers</option>
+              <option>5+ travelers</option>
+            </select>
+          </label>
+
+          <button class="button button-dark" type="submit">
+            Search
+          </button>
+        </form>
+
+        <p class="demo-notice">
+          Prototype notice: Prices and availability are demonstration
+          data. No real booking or payment is processed.
+        </p>
+      </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Curated escapes</p>
+        <h2>Extraordinary places, intelligently selected.</h2>
+        <p>
+          Explore sample luxury journeys selected for exceptional
+          experiences and compelling overall value.
+        </p>
+      </div>
+
+      <div class="destination-grid">
+
+        <article class="destination-card paris">
+          <div class="card-overlay">
+            <h3>Paris</h3>
+            <p>Timeless elegance and celebrated cuisine</p>
+            <strong>Sample packages from $2,480</strong>
+          </div>
+        </article>
+
+        <article class="destination-card dubai">
+          <div class="card-overlay">
+            <h3>Dubai</h3>
+            <p>Architectural wonder and desert luxury</p>
+            <strong>Sample packages from $2,920</strong>
+          </div>
+        </article>
+
+        <article class="destination-card maldives">
+          <div class="card-overlay">
+            <h3>Maldives</h3>
+            <p>Private villas and turquoise water</p>
+            <strong>Sample packages from $4,260</strong>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- AI Concierge -->
+    <section id="concierge" class="concierge-section">
+      <div class="concierge-content">
+        <p class="eyebrow">FareLuxe AI Concierge</p>
+
+        <h2>A journey designed around you.</h2>
+
+        <p>
+          Tell us what would make your trip exceptional. The
+          concierge considers your budget, cabin preference, hotel
+          style, dietary needs, accessibility requirements and
+          special occasions.
+        </p>
+
+        <ul>
+          <li>✓ Conversational trip planning</li>
+          <li>✓ Personalized flight and hotel combinations</li>
+          <li>✓ Day-by-day itinerary creation</li>
+        </ul>
+
+        <button class="button button-gold open-planner">
+          Meet Your Concierge
+        </button>
+      </div>
+
+      <div class="chat-card">
+        <div class="chat-header">
+          <span class="chat-avatar">FL</span>
+
+          <div>
+            <strong>FareLuxe Concierge</strong>
+            <small>● Prototype assistant</small>
+          </div>
+        </div>
+
+        <div id="messages" class="messages">
+          <div class="message ai-message">
+            Welcome to FareLuxe. Where would you love to go,
+            and what would make this journey perfect?
+          </div>
+
+          <div class="message user-message">
+            Paris for our anniversary. We love fine dining
+            and boutique hotels.
+          </div>
+
+          <div class="message ai-message">
+            A wonderful choice. What departure city, dates
+            and approximate budget should I consider?
+          </div>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <input
+            id="chatInput"
+            type="text"
+            placeholder="Describe your perfect journey..."
+            autocomplete="off"
+          >
+
+          <button type="submit" aria-label="Send message">
+            →
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="section packages-section">
+      <div class="section-heading">
+        <p class="eyebrow">Sample recommendations</p>
+
+        <h2>Luxury packages with understandable value.</h2>
+
+        <p>
+          These sample results demonstrate how FareLuxe will compare
+          the total experience, not only the advertised price.
+        </p>
+      </div>
+
+      <div class="package-grid">
     select {
       font: inherit;
     }
